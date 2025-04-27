@@ -13,6 +13,13 @@ A small article based API that allows users basic interactions to retrieve a lis
 
 ## How to run
 
+create an file called .env in the root directory with the following content to link up with the docker instance of the database:
+POSTGRES_DB="pa-article-api"
+POSTGRES_HOST="localhost"
+POSTGRES_PASSWORD="postgres"
+POSTGRES_PORT=5433
+POSTGRES_USER="postgres"
+
 ### Requirements
 
 - Docker
