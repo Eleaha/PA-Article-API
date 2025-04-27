@@ -15,5 +15,6 @@ export const handleErrors = (
 	if (badRequestCodes.includes(err["code"])) {
 		res.status(400).send({ message: "Bad request" });
 	}
-	return next(err);
+
+	res.status(500).send({ msg: "Internal server error" });
 };
