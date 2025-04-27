@@ -5,6 +5,8 @@ services:
    - db
   volumes:
    - .:/app
+  ports:
+   - "8000:8000"
 
  db:
   image: postgres

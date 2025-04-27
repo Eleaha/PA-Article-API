@@ -25,7 +25,8 @@ While double checking database connection best practices, I came across an artic
 I then moved onto looking at compose files, using the configuration setting for my PSQL container to create a script that would run with "docker compose up". It was pretty easy to get the script written, running and database accessible in the command line, however, when I tried to interact with the database with table management and seed scripts in my app using .env files, the connection defaulted to my local instance again. After a little more research, I realised I needed to use the port I had mapped to on my host, rather than the port exposed by the container.
 
 ### Swagger
-I've only briefly used Swagger as part of a tutorial project in C#, so integrating it into a TypeScript project was new.
+I've only briefly used Swagger as part of a tutorial project in C#, so integrating it into a TypeScript project was new. I started by reading a few articles and dome docs to get an idea of what would work best, and landed on swagger UI and swagger Jsdoc. Unlike C#, docs for swagger can't be automatically generated based off controller class and needs a library called tsoa which uses class architecture and decorators to automatically generate routes and documentation. I implemented basic functionality on a single controller early on and got it working, however decided that for 3 endpoints it was definitely overkill and decided to go the manual yaml tag route. However, tsoa is definitely something I'd be looking to use for future personal projects.
+
 
 ## AI usage
 - Generation of test data
