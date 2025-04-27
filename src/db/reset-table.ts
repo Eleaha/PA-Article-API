@@ -7,7 +7,7 @@ export const createTable = async () => {
 		await db.query(`DROP TABLE IF EXISTS articles;`);
 		await db.query(`CREATE TABLE articles (
             article_id SERIAL PRIMARY KEY,
-            summary VARCHAR(255),
+            summary VARCHAR(200),
             author VARCHAR(50) NOT NULL,
             body TEXT NOT NULL,
 			publication_date TIMESTAMPTZ DEFAULT now());`);
@@ -17,7 +17,7 @@ export const createTable = async () => {
 };
 
 export const dropTable = async () => {
-		try {
+	try {
 		await db.query(`DROP TABLE IF EXISTS articles;`);
 	} catch (err) {
 		console.log("something went wrong with table drop:", err);
