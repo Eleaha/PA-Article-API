@@ -1,7 +1,15 @@
 import express, { Router } from "express";
-import { getArticles, postArticle } from "../controllers/articles-controllers";
+import {
+	getArticleById,
+	getArticles,
+	postArticle,
+} from "../controllers/articles-controllers";
 
 export const articlesRouter: Router = express.Router();
+
+articlesRouter.get("/", getArticles);
+articlesRouter.post("/", postArticle);
+articlesRouter.get("/:article_id", getArticleById);
 
 /**
  * @swagger
@@ -29,7 +37,6 @@ export const articlesRouter: Router = express.Router();
  *                  publication_date:
  *                    type: string
  */
-articlesRouter.get("/", getArticles);
 
 /**
  * @swagger
@@ -87,4 +94,44 @@ articlesRouter.get("/", getArticles);
  *                   format: date-time
  *                   example: 2025/04/27T14:30:00Z
  */
-articlesRouter.post("/", postArticle);
+
+/**
+ * @swagger
+ * /articles/{article_id}:
+ *   get:
+ *     summary: Retrieve a single article by ID
+ *     tags:
+ *       - Article
+ *     parameters:
+ *       - in: path
+ *         name: article_id
+ *         required: true
+ *         description: The unique ID of the article
+ *         schema:
+ *           type: integer
+ *           example: 1
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved the article
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 article_id:
+ *                   type: integer
+ *                   example: 5
+ *                 author:
+ *                   type: string
+ *                   example: "Sophia Martinez"
+ *                 summary:
+ *                   type: string
+ *                   example: "Senate passes sweeping cybersecurity bill following rise in ransomware attacks."
+ *                 body:
+ *                   type: string
+ *                   example: "After months of debate, the Senate has passed a major cybersecurity bill aimed at protecting government agencies and private companies from cyberattacks. The legislation mandates stricter reporting standards and increased funding for the Cybersecurity and Infrastructure Security Agency (CISA)."
+ *                 publication_date:
+ *                   type: string
+ *                   format: date-time
+ *                   example: "2025-04-21T17:20:00.000Z"
+ */

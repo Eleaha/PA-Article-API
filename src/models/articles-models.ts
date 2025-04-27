@@ -19,3 +19,9 @@ export const insertArticle = async (newArticle: Article) => {
 	const { rows } = await db.query(query);
 	return rows[0];
 };
+
+export const fetchArticleById = async (articleId: number) => {
+	const query = format(`SELECT * FROM articles WHERE article_id = %s`, articleId);
+	const { rows } = await db.query(query);
+	return rows[0];
+};

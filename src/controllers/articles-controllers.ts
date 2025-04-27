@@ -1,5 +1,9 @@
 import { NextFunction, Request, Response } from "express";
-import { fetchArticles, insertArticle } from "../models/articles-models";
+import {
+	fetchArticleById,
+	fetchArticles,
+	insertArticle,
+} from "../models/articles-models";
 import { Article } from "../interfaces";
 
 export const getArticles = async (
@@ -27,6 +31,23 @@ export const postArticle = async (
 		}
 		const insertedArticle = await insertArticle(newArticle);
 		return res.status(201).send({ article: insertedArticle });
+	} catch (err) {
+		return next(err);
+	}
+};
+
+export const getArticleById = async (
+	req: Request,
+	res: Response,
+	next: NextFunction
+) => {
+	try {
+		const { article_id } = req.params;
+		const article: Article = await fetchArticleById(+article_id);
+
+		article
+			? res.status(200).send({ article })
+			: await Promise.reject({ status: 404, message: "Not found" });
 	} catch (err) {
 		return next(err);
 	}

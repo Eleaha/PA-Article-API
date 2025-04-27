@@ -6,7 +6,7 @@ export const handleErrors = (
 	res: Response,
 	next: NextFunction
 ) => {
-	const badRequestCodes = ["22008", "22001"];
+	const badRequestCodes = ["22008", "22001", "42703"];
 
 	if (err.status && err.message) {
 		res.status(err.status).send({ message: err.message });

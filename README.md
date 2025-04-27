@@ -26,7 +26,7 @@ Other commands are:
 
 ## New Knowledge and Challenges
 
-Overall, I treated treated this as a chance to explore tech I'd been meaning to for a while, but that came with the main challenge of finding out loads of cool features and ways it could be applied to larger applications, but don't make sense for an API this small
+Overall, I treated treated this as a chance to explore tech I'd been meaning to for a while, but that came with the main challenge of finding out loads of cool features and ways it could be applied to larger applications, but don't make sense for an API this small.
 
 ### Docker
 
