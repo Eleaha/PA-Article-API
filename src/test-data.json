@@ -1,0 +1,62 @@
+[
+	{
+		"author": "Emily Thompson",
+		"summary": "Prime Minister announces new education reforms aimed at increasing school funding and modernizing curriculum.",
+		"body": "In a press conference today, Prime Minister Claire Morrison introduced a sweeping reform package designed to modernize the national education system. The proposal includes a significant funding increase, digital learning upgrades, and new teacher training programs. Critics, however, question how the initiative will be funded.",
+		"publication_date": "2025-04-25T09:30:00Z"
+	},
+	{
+		"author": "James Patel",
+		"summary": "Record-breaking heatwave hits southern states, with temperatures soaring above 110°F.",
+		"body": "A historic heatwave continues to grip the southern U.S., with several cities experiencing record-breaking temperatures. Health officials have issued warnings about heat exhaustion and dehydration, urging residents to remain indoors. Climate scientists are pointing to global warming as a significant factor.",
+		"publication_date": "2025-04-24T13:00:00Z"
+	},
+	{
+		"author": "Olivia Chen",
+		"summary": "Federal Reserve hints at possible interest rate cuts amid slowing economic growth.",
+		"body": "In a speech to financial leaders, Federal Reserve Chair Mark Bennett suggested the central bank is open to cutting interest rates to stimulate the economy. The announcement comes amid concerns about a cooling housing market and sluggish job growth. Markets responded positively to the news.",
+		"publication_date": "2025-04-23T15:45:00Z"
+	},
+	{
+		"author": "Liam Donnell",
+		"summary": "Thousands gather in Washington D.C. for climate change rally led by student activists.",
+		"body": "Tens of thousands of demonstrators, many of them students, filled the National Mall today in a climate protest demanding urgent action from lawmakers. The rally featured speeches from scientists, indigenous leaders, and youth organizers. Organizers say the protest is part of a larger global movement.",
+		"publication_date": "2025-04-22T11:00:00Z"
+	},
+	{
+		"author": "Sophia Martinez",
+		"summary": "Senate passes sweeping cybersecurity bill following rise in ransomware attacks.",
+		"body": "After months of debate, the Senate has passed a major cybersecurity bill aimed at protecting government agencies and private companies from cyberattacks. The legislation mandates stricter reporting standards and increased funding for the Cybersecurity and Infrastructure Security Agency (CISA).",
+		"publication_date": "2025-04-21T17:20:00Z"
+	},
+	{
+		"author": "Daniel Reed",
+		"summary": "Stock markets close lower as tech sector faces downturn after earnings reports.",
+		"body": "U.S. stock markets closed in the red today, led by declines in major tech stocks following underwhelming quarterly earnings. Analysts cite slowing consumer demand and increased regulation as contributing factors. Investors are watching for signs of recovery later in the quarter.",
+		"publication_date": "2025-04-20T16:00:00Z"
+	},
+	{
+		"author": "Hannah Kim",
+		"summary": "Massive wildfire forces evacuations in Northern California as dry conditions worsen.",
+		"body": "Fire crews are battling a fast-moving wildfire that has already burned more than 25,000 acres in Northern California. Hundreds of residents have been ordered to evacuate, and Governor Nathan Ellis has declared a state of emergency. Officials blame unseasonably dry conditions and high winds.",
+		"publication_date": "2025-04-19T08:30:00Z"
+	},
+	{
+		"author": "Marcus Green",
+		"summary": "National rail strike causes major travel disruptions across the country.",
+		"body": "Commuters faced major delays today as thousands of rail workers walked off the job in protest of working conditions and wage disputes. The strike has led to widespread travel disruptions and economic impact. Negotiations between the union and government officials remain ongoing.",
+		"publication_date": "2025-04-18T10:00:00Z"
+	},
+	{
+		"author": "Isabella Rossi",
+		"summary": "New study finds sharp rise in teen social media use linked to anxiety and sleep issues.",
+		"body": "A new national health study reveals a dramatic increase in social media usage among teens, correlating with higher rates of anxiety and sleep disturbances. Experts are urging parents and schools to promote digital well-being and balance screen time with offline activities.",
+		"publication_date": "2025-04-17T14:45:00Z"
+	},
+	{
+		"author": "Ahmed Al-Sayeed",
+		"summary": "NASA successfully launches Artemis II mission, paving the way for future lunar landing.",
+		"body": "NASA’s Artemis II mission launched today from Kennedy Space Center, sending four astronauts on a 10-day journey around the Moon. This marks the first crewed mission in NASA’s renewed lunar program and lays the groundwork for a planned Moon landing in 2026.",
+		"publication_date": "2025-04-16T12:00:00Z"
+	}
+]
