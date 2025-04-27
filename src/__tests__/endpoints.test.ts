@@ -13,6 +13,13 @@ beforeEach(async () => {
 	await seedDb(testData);
 });
 
+describe("general errors", () => {
+	test("404: path not found", async () => {
+		const { body } = await request(app).get("/garbage").expect(404)
+		expect(body.message).toBe("Path not found")
+	})
+})
+
 describe("/articles", () => {
 	test("GET 200: serves a list of all articles", async () => {
 		const { body } = await request(app).get("/articles").expect(200);

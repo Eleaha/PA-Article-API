@@ -14,6 +14,17 @@ app.use(express.json());
 app.use("/api", apiRouter);
 app.use("/articles", articlesRouter);
 
+app.all(
+	"*",
+	(
+		req: Request,
+		res: Response,
+		next: NextFunction
+	) => {
+		res.status(404).send({message: "Path not found"});
+	}
+);
+
 app.use(
 	(
 		err: ErrorRequestHandler,
