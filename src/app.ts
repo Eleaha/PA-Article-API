@@ -1,13 +1,8 @@
 import express from "express";
+import { apiRouter  } from "./routes/api-routes";
 
 export const app = express();
 
 app.use(express.json());
 
-console.log("app running");
-
-app.get("/", (req, res) => {
-	return res.status(200).send({
-		message: "api running",
-	});
-});
+app.use("/api", apiRouter)
