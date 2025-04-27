@@ -7,7 +7,8 @@
 		"test": "jest",
 		"reset-tables": "ts-node src/db/reset-table.ts",
 		"seed-db": "ts-node src/db/seed.ts",
-		"db-connect": "psql -h localhost -p 5433 -U postgres -d pa-article-api"
+		"db-connect": "psql -h localhost -p 5433 -U postgres -d pa-article-api",
+		"build": "tsc"
 	},
 	"keywords": [],
 	"author": "",
@@ -27,8 +28,8 @@
 		"@types/node": "^20.12.12",
 		"@types/supertest": "^6.0.2",
 		"jest": "^29.7.0",
-		"ts-jest": "^29.1.2",
 		"supertest": "^7.0.0",
+		"ts-jest": "^29.1.2",
 		"typescript": "^5.8.3"
 	}
 }
