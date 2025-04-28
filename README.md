@@ -35,7 +35,7 @@ POSTGRES_USER="postgres"
 
 5. Make sure docker is installed and running, and run the command `docker compose up -d` to spin up a database instance.
 
-6. Run `npm run seed-db` to seed the database, then `npm run listen` to start the server - click the http://localhost:8000/api link in the terminal to go to the Swagger documentation.
+6. Run `npm run seed-db` to seed the database, then `npm run listen` to start the server - click the link in the terminal (or http://localhost:8080/api) to go to the Swagger documentation.
 
 ### Other commands
 - `npm test` - runs test suite
