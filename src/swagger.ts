@@ -18,5 +18,5 @@ export const swaggerSpec = swaggerJsdoc(options);
 
 //serving the swagger docs at the default endpoint
 export const swaggerDocs = (app: Express) => {
-	app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+	app.use("/api", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 };
