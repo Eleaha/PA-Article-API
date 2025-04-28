@@ -16,33 +16,28 @@ articlesRouter.get("/:article_id", getArticleById);
 /**
  * @swagger
  * /articles:
- *  get:
- *    summary: Serves all articles
- *    tags:
- *      - Articles
- *    responses:
- *      200:
- *        description: Successfully retrieved articles
- *        content:
- *          application/json:
- *            schema:
- *              type: array
- *              items:
- *                type: object
- *                properties:
- *                  article_id:
- *                    type: number
- *                  summary:
- *                    type: string
- *                  author:
- *                    type: string
- *                  publication_date:
- *                    type: string
- */
-
-/**
- * @swagger
- * /articles:
+ *   get:
+ *     summary: Serves all articles
+ *     tags:
+ *       - Articles
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved articles
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   article_id:
+ *                     type: number
+ *                   summary:
+ *                     type: string
+ *                   author:
+ *                     type: string
+ *                   publication_date:
+ *                     type: string
  *   post:
  *     summary: Create a new article
  *     tags:
@@ -70,7 +65,7 @@ articlesRouter.get("/:article_id", getArticleById);
  *               publication_date:
  *                 type: string
  *                 format: date-time
- *                 example: 2025/04/27T14:30:00Z
+ *                 example: 2025-04-27T14:30:00Z
  *     responses:
  *       201:
  *         description: Article successfully created
@@ -94,11 +89,8 @@ articlesRouter.get("/:article_id", getArticleById);
  *                 publication_date:
  *                   type: string
  *                   format: date-time
- *                   example: 2025/04/27T14:30:00Z
- */
-
-/**
- * @swagger
+ *                   example: 2025-04-27T14:30:00Z
+ *
  * /articles/{article_id}:
  *   get:
  *     summary: Retrieve a single article by ID
@@ -125,15 +117,15 @@ articlesRouter.get("/:article_id", getArticleById);
  *                   example: 5
  *                 author:
  *                   type: string
- *                   example: "Sophia Martinez"
+ *                   example: Sophia Martinez
  *                 summary:
  *                   type: string
- *                   example: "Senate passes sweeping cybersecurity bill following rise in ransomware attacks."
+ *                   example: Senate passes sweeping cybersecurity bill following rise in ransomware attacks.
  *                 body:
  *                   type: string
- *                   example: "After months of debate, the Senate has passed a major cybersecurity bill aimed at protecting government agencies and private companies from cyberattacks. The legislation mandates stricter reporting standards and increased funding for the Cybersecurity and Infrastructure Security Agency (CISA)."
+ *                   example: After months of debate, the Senate has passed a major cybersecurity bill aimed at protecting government agencies and private companies from cyberattacks. The legislation mandates stricter reporting standards and increased funding for the Cybersecurity and Infrastructure Security Agency (CISA).
  *                 publication_date:
  *                   type: string
  *                   format: date-time
- *                   example: "2025-04-21T17:20:00.000Z"
+ *                   example: 2025-04-21T17:20:00.000Z
  */

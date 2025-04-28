@@ -1,21 +1,12 @@
 services:
- app:
-  build: .
-  depends_on:
-   - db
-  volumes:
-   - .:/app
-  ports:
-   - "8000:8000"
-
  db:
-  image: postgres
-  restart: always
+  image: postgres:latest
   container_name: database
   environment:
    POSTGRES_USER: postgres
    POSTGRES_PASSWORD: postgres
    POSTGRES_DB: pa-article-api
+  # port 5433 was mapped to 5432 so as to not conflict with locally running database instances
   ports:
    - "5433:5432"
   volumes:

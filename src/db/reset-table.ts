@@ -1,6 +1,6 @@
 import { db } from "./db-connection";
 
-//functions to reset tables to create a clean database for testing environemnts
+//functions to reset tables to create a clean database for testing environments
 
 export const createTable = async () => {
 	try {

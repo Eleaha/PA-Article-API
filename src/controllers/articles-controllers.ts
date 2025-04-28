@@ -6,7 +6,7 @@ import {
 } from "../models/articles-models";
 import { Article } from "../interfaces";
 
-//A set of functions which interact with models to send responses to API calls
+//a set of functions which interact with models to send responses to API calls
 
 export const getArticles = async (
 	req: Request,
@@ -26,12 +26,14 @@ export const postArticle = async (
 		const newArticle: Article = req.body;
 		const validKeys: string[] = ["summary", "author", "body", "publication_date"];
 
+//checking for valid payload structure from an array of valid keys
 		for (const key of Object.keys(newArticle)) {
 			if (!validKeys.includes(key)) {
 				await Promise.reject({ status: 400, message: "Bad request" });
 			}
 		}
 		const insertedArticle = await insertArticle(newArticle);
+
 		return res.status(201).send({ article: insertedArticle });
 	} catch (err) {
 		return next(err);

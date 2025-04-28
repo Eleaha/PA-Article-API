@@ -2,6 +2,7 @@ import format from "pg-format";
 import { Article } from "../interfaces";
 import { createTable, dropTable } from "./reset-table";
 import { db } from "./db-connection";
+import data from "../__tests__/test-data.json"
 
 //a seed script which uses json data to seed the database
 export const seedDb = async (testData: Article[]) => {
@@ -18,3 +19,5 @@ export const seedDb = async (testData: Article[]) => {
 		console.log("seeding went wrong with seeding", err);
 	}
 };
+
+seedDb(data)

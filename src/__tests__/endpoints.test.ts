@@ -5,17 +5,17 @@ import { db } from "../db/db-connection";
 import testData from "./test-data.json";
 import { Article } from "../interfaces";
 
-//closing database conenction to avoid random hanging
+//closing database connection to avoid random hanging
 afterAll(async () => {
 	await db.end();
 });
 
-//rereeshing the tables and seeding before each test to ensure clean data
+//refreshing the tables and seeding before each test to ensure clean data
 beforeEach(async () => {
 	await seedDb(testData);
 });
 
-//testing for unfound paths
+//testing for un-found paths
 describe("general errors", () => {
 	test("404: path not found", async () => {
 		const { body } = await request(app).get("/garbage").expect(404)
