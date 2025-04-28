@@ -1,4 +1,4 @@
-FROM node:23
+FROM node:20
 WORKDIR /app
 
 COPY package*.json ./
@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "listen"]

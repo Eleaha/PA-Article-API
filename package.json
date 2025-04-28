@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "jest",
 		"reset-tables": "ts-node src/db/reset-table.ts",
-		"seed-db": "ts-node src/db/seed.ts",
+		"seed-db": "ts-node src/db/seedDb.ts",
 		"db-connect": "psql -h localhost -p 5433 -U postgres -d pa-article-api",
 		"build": "tsc",
 		"listen": "nodemon src/listen.ts"

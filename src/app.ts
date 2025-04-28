@@ -10,10 +10,14 @@ import { handleErrors } from "./error-handler";
 
 export const app = express();
 
+//automatically parsing incoming data to a json format
 app.use(express.json());
+
+//defininng route endpoint
 app.use("/api", apiRouter);
 app.use("/articles", articlesRouter);
 
+//handiling 404 errors any unknown paths
 app.all(
 	"*",
 	(
@@ -25,6 +29,7 @@ app.all(
 	}
 );
 
+//using custom error handling middleware to catch any errors and send the correct response accordingly
 app.use(
 	(
 		err: ErrorRequestHandler,
