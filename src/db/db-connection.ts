@@ -1,9 +1,9 @@
 import { Pool, PoolConfig } from "pg";
 import dotenv from "dotenv"
 
-//Database connection env variables, if working on a real app,  would be separated into test. dev and prod environments
+//database connection env variables, if working on a real app,  would be separated into test. dev and prod environments
 
-//configuring env to default file of .env
+//configuring env to default file (.env)
 dotenv.config()
 const poolConfig: PoolConfig = {
 	database: process.env.POSTGRES_DB,

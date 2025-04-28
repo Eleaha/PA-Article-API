@@ -58,6 +58,8 @@ I then moved onto looking at compose files, using the configuration setting for 
 
 I then implemented a dockerfile to attempt to automate everything up to the point of the server listen file running, when I was landing on solutions that involved custom bash scripts, I realised that in this simple case, it was probably best to stick to the simpler side and leave it at the containerised database.
 
+Even after this little rummage and experimentation with docker, I can definitely see how in a production environment it could be an invaluable tool.
+
 ### Swagger
 
 I've only briefly used Swagger as part of a tutorial project in C#, so integrating it into a TypeScript application was new. I started by reading a few articles and some docs to get an idea of what would work best, and landed on swagger UI and swagger Jsdoc. Unlike C#, docs for swagger can't be automatically generated based off classes and needs a library called tsoa to facilitate, which uses class architecture and decorators to automatically generate routes and documentation. I implemented basic functionality on a single controller early on and got it working, however decided that for 3 endpoints it was definitely overkill. Tsoa looks really interesting, and is something I'm looking to use for future personal projects.
