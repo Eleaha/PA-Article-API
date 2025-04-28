@@ -4,7 +4,7 @@ A small article based API that allows basic interactions to retrieve a list of a
 
 ## Tech choices
 
-- Typescript
+- TypeScript
 - Express
 - PostgreSQL
 - Jest
@@ -14,7 +14,9 @@ A small article based API that allows basic interactions to retrieve a list of a
 ## How to run
 
 ### Requirements
-
+- Node (minimum v21.6.0)
+- TypeScript
+- npm or yarn
 - Docker (including Docker Compose)
 - an IDE
 
