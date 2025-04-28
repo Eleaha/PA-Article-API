@@ -6,6 +6,8 @@ import {
 } from "../models/articles-models";
 import { Article } from "../interfaces";
 
+//A set of functions which interact with models to send responses to API calls
+
 export const getArticles = async (
 	req: Request,
 	res: Response,

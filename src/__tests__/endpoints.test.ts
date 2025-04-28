@@ -5,14 +5,17 @@ import { db } from "../db/db-connection";
 import testData from "./test-data.json";
 import { Article } from "../interfaces";
 
-//managing database connection and ensuring fresh data for each test
+//closing database conenction to avoid random hanging
 afterAll(async () => {
 	await db.end();
 });
+
+//rereeshing the tables and seeding before each test to ensure clean data
 beforeEach(async () => {
 	await seedDb(testData);
 });
 
+//testing for unfound paths
 describe("general errors", () => {
 	test("404: path not found", async () => {
 		const { body } = await request(app).get("/garbage").expect(404)

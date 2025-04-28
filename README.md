@@ -1,6 +1,6 @@
 # PA-Article-API
 
-A small article based API that allows users basic interactions to retrieve a list of articles,an individual article and add an article.
+A small article based API that allows basic interactions to retrieve a list of articles, an individual article and add an article to the database.
 
 ## Tech choices
 
@@ -13,13 +13,6 @@ A small article based API that allows users basic interactions to retrieve a lis
 
 ## How to run
 
-create an file called .env in the root directory with the following content to link up with the docker instance of the database:
-POSTGRES_DB="pa-article-api"
-POSTGRES_HOST="localhost"
-POSTGRES_PASSWORD="postgres"
-POSTGRES_PORT=5433
-POSTGRES_USER="postgres"
-
 ### Requirements
 
 - Docker
@@ -27,9 +20,31 @@ POSTGRES_USER="postgres"
 
 ### Instructions
 
-open you ide with docker installed, and run the command docker compose up --build. You should see a link to the locally hosted address for the Swagger UI docs for the application.
+1. Open your IDE with docker installed, and run the command `docker compose up --build` and wait until it's done it's thing.
+
+2. Create an file called .env in the root directory with the following content to configure the connection to the dockerised database instance:
+```
+POSTGRES_DB="pa-article-api"
+POSTGRES_HOST="localhost"
+POSTGRES_PASSWORD="postgres"
+POSTGRES_PORT=5433
+POSTGRES_USER="postgres"
+```
+
+3. Run `npm run seed-db` to setup and seed the database
+
+4. Run `npm run listen` to start running the API locally.
+
+5. There should be a link in the terminal which is something like http://localhost:0000 which will take you to the swagger documentation.
+
+6. Use swagger to see enpoint documentation, as well as send requests to the API.
 
 Other commands are:
+- ` npm test ` - runs test suite
+- ` npm run reset-tables` - resets tables
+- `npm run seed-db` - rebuilds tables and seeds data
+- `npm run db-connect` - connects to the dockerised psql database
+- `npm run listen` - starts nodemon and localhost server
 
 ## New Knowledge and Challenges
 

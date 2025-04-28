@@ -2,6 +2,7 @@ import { Express } from "express";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
+//defining swagger options
 const options: swaggerJsdoc.Options = {
 	definition: {
 		openapi: "3.1.0",
@@ -15,6 +16,7 @@ const options: swaggerJsdoc.Options = {
 
 export const swaggerSpec = swaggerJsdoc(options);
 
+//serving the swagger docs at the default endpoint
 export const swaggerDocs = (app: Express) => {
 	app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 };

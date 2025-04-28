@@ -7,6 +7,8 @@ import {
 
 export const articlesRouter: Router = express.Router();
 
+//setting up routes for the /articles endpoint
+
 articlesRouter.get("/", getArticles);
 articlesRouter.post("/", postArticle);
 articlesRouter.get("/:article_id", getArticleById);
